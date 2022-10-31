@@ -1,0 +1,23 @@
+{
+    "enabled": {
+        "book": true,
+        "scroll": true,
+        "wands": true,
+        "npcs": true,
+        "dispensers": true,
+        "commands": true,
+        "treasure": true,
+        "trades": true,
+        "looting": true
+    },
+    "tier": "advanced",
+    "element": "necromancy",
+    "type": "transformation",
+    "cost": 40,
+    "chargeup": 20,
+    "cooldown": 60,
+    "base_properties": {
+        "duration": 160,
+        "soul_cost": 0.05
+    }
+}

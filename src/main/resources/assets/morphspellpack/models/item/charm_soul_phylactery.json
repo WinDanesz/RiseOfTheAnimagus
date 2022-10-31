@@ -1,0 +1,15 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "morphspellpack:items/charm_soul_phylactery"
+    },
+    "overrides": [
+        { "predicate": { "soul": 0.0  }, "model": "morphspellpack:item/charm_soul_phylactery_00"   },
+        { "predicate": { "soul": 0.16 }, "model": "morphspellpack:item/charm_soul_phylactery_01"   },
+        { "predicate": { "soul": 0.33 }, "model": "morphspellpack:item/charm_soul_phylactery_02"   },
+        { "predicate": { "soul": 0.5  }, "model": "morphspellpack:item/charm_soul_phylactery_03"   },
+        { "predicate": { "soul": 0.66 }, "model": "morphspellpack:item/charm_soul_phylactery_04"   },
+        { "predicate": { "soul": 0.83 }, "model": "morphspellpack:item/charm_soul_phylactery_05"   },
+        { "predicate": { "soul": 1.0  }, "model": "morphspellpack:item/charm_soul_phylactery_full" }
+    ]
+}

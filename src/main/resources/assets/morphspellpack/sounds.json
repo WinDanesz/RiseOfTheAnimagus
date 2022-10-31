@@ -1,0 +1,5 @@
+{
+    "entity.light_wisp.noise": 	{"category": "hostile", "sounds": ["morphspellpack:light_wisp_noise"]},
+    "entity.light_wisp.hurt": 		{"category": "hostile", "sounds": ["morphspellpack:light_wisp_hit"]},
+    "entity.radiant_spark.hit": 	{"category": "hostile", "sounds": ["morphspellpack:radiant_spark_hit"]}
+}

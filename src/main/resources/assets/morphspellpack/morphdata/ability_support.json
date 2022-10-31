@@ -1,0 +1,59 @@
+{
+    "electroblob.wizardry.entity.living.EntityPhoenix": [
+        "flightFlap",
+        "spellCast|ebwizardry:fire_breath,0",
+        "fireImmunity",
+        "hover"
+    ],
+    "com.windanesz.morphspellpack.entity.living.EntityBatMinion": [
+        "flightFlap",
+        "timedPotion|minecraft:night_vision,300,300,morphspellpack:ring_bat"
+    ],
+    "com.windanesz.morphspellpack.entity.living.EntityChicken": [
+        "flightFlap",
+        "spellCastWithArtefact|ebwizardry:life_drain,0,morphspellpack:ring_bat"
+    ],
+    "com.windanesz.morphspellpack.entity.living.EntityDisguise": [
+        "disguise"
+    ],
+    "net.minecraft.entity.monster.EntityBlaze": [
+        "hover",
+        "fireImmunity",
+        "waterAllergy",
+        "spellCast|ebwizardry:fireball,30"
+    ],
+    "electroblob.wizardry.entity.living.EntityLightningWraith": [
+        "hover",
+        "spellCast|ebwizardry:lightning_disc,60"
+    ],
+    "electroblob.wizardry.entity.living.EntityShadowWraith": [
+        "flightFlap",
+        "spellCast|morphspellpack:shadow_wraith_form,10"
+    ],
+    "com.windanesz.morphspellpack.entity.living.EntityLightWisp": [
+        "flightFlap"
+    ],
+    "com.windanesz.morphspellpack.entity.living.EntityLich": [
+        "lichNeedsPhylactery",
+        "float|-0.114,true",
+        "poisonResistance",
+        "potionResistance|minecraft:regeneration,minecraft:saturation,minecraft:instant_health,minecraft:hunger,minecraft:nausea",
+        "hoverWithToggle",
+        "flightFlap",
+        "sunburn",
+        "spellCast|ebwizardry:life_drain,80"
+    ],
+    "electroblob.wizardry.entity.living.EntityIceWraith": [
+        "hover",
+        "spellCast|ebwizardry:ice_shard,20"
+    ],
+    "net.minecraft.entity.monster.EntityCreeper": [
+        "selfDetonate|true,false,1.5f"
+    ],
+    "net.minecraft.entity.monster.EntitySpider": [
+        "climb",
+        "hostile",
+        "webWalk",
+        "spellCastWithArtefact|ebwizardry:cobwebs,40,morphspellpack:ring_web"
+    ]
+}

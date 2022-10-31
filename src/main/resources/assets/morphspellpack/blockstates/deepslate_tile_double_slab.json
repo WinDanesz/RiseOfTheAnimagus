@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "backportedstuff:deepslate_tile_double_slab" },
+        "half=top": { "model": "backportedstuff:deepslate_tile_double_slab" }
+    }
+}

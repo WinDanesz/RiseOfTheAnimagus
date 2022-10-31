@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": {
+            "model": "backportedstuff:reinforced_deepslate"
+        }
+    }
+}

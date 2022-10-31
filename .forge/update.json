@@ -1,0 +1,13 @@
+{
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/wizardryutils",
+  "promos": {
+    "1.12.2-latest": "0.1.0",
+    "1.12.2-recommended": "0.1.0",
+    "'1": {
+      "12": {
+        "2-latest'": "v1.0.1",
+        "2-recommended'": "v1.0.1"
+      }
+    }
+  }
+}

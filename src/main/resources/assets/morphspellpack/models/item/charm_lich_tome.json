@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "morphspellpack:items/charm_lich_tome"
+    }
+}

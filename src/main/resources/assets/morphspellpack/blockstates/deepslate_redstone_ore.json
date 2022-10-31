@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "backportedstuff:lit_deepslate_redstone_ore"
+    }
+  }
+}

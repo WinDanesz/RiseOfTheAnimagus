@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "backportedstuff:deepslate_brick_half_slab" },
+        "half=top": { "model": "backportedstuff:deepslate_brick_upper_slab" }
+    }
+}
