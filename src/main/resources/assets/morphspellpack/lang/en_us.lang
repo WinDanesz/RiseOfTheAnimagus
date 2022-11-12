@@ -1,5 +1,8 @@
 
 # Generic
+
+key.morphspellpack.category=Rise of the Animagus (MorphSpellPack)
+key.morphspellpack.activate_morph_ability=Morph Active Ability (Toggle)
 entity.morphspellpack:bat_minion.name=Bat
 entity.morphspellpack:disguise.name=I'm just a block, trust me!
 entity.morphspellpack:light_wisp.name=Light Wisp

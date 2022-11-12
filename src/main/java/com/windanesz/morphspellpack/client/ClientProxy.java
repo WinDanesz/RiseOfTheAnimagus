@@ -56,7 +56,7 @@ public class ClientProxy extends CommonProxy {
 
 	private void registerKeybindings() {
 		// Initializing
-		KEY_ACTIVATE_MORPH_ABILITY = new KeyBinding("key.morphspellpack.activate_morph_ability", Keyboard.KEY_K, "key.ancientspellcraft.category");
+		KEY_ACTIVATE_MORPH_ABILITY = new KeyBinding("key.morphspellpack.activate_morph_ability", Keyboard.KEY_K, "key.morphspellpack.category");
 		ClientRegistry.registerKeyBinding(KEY_ACTIVATE_MORPH_ABILITY);
 	}
 }
