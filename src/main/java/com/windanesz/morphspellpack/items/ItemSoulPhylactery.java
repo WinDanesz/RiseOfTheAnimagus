@@ -5,6 +5,7 @@ import com.windanesz.morphspellpack.handler.LichHandler;
 import com.windanesz.morphspellpack.spell.SpellTransformation;
 import com.windanesz.wizardryutils.integration.baubles.BaublesIntegration;
 import com.windanesz.wizardryutils.item.ITickableArtefact;
+import com.windanesz.wizardryutils.tools.WizardryUtilsTools;
 import electroblob.wizardry.Wizardry;
 import electroblob.wizardry.item.IWorkbenchItem;
 import electroblob.wizardry.item.ItemArtefact;
@@ -176,6 +177,12 @@ public class ItemSoulPhylactery extends ItemArtefact implements IWorkbenchItem, 
 	public ItemStack onItemUseFinish(ItemStack itemstack, World worldIn, EntityLivingBase entityLiving) {
 		if (entityLiving instanceof EntityPlayer && LichHandler.isLich(entityLiving)
 				&& getPercentFilled(itemstack) >= Settings.generalSettings.soul_phylactery_cost_of_use) {
+
+			if (hasEntity(itemstack) && getEntity(itemstack).equals(entityLiving.getName())) {
+				WizardryUtilsTools.sendMessage(entityLiving, "item.morphspellpack:charm_soul_phylactery.drink_attempt_from_own_phylactery", false);
+				return itemstack;
+			}
+
 			consumePercent(itemstack, Settings.generalSettings.soul_phylactery_cost_of_use);
 			((EntityPlayer) entityLiving).getFoodStats().addStats(2, 0.1f);
 			return itemstack;

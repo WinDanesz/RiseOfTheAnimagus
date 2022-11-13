@@ -27,6 +27,7 @@ item.morphspellpack:charm_soul_phylactery.desc=Each kill adds more charge to the
 item.morphspellpack:charm_soul_phylactery.desc_initial=Killing an entity begins to fill this with its soul
 item.morphspellpack:charm_soul_phylactery.status=%1$s%% filled with %2$s souls
 item.morphspellpack:charm_soul_phylactery.name=Soul Phylactery
+item.morphspellpack:charm_soul_phylactery.drink_attempt_from_own_phylactery=You can't drink from your own phylactery, you should wear it
 item.morphspellpack:ring_bat.desc=The Bat Form spell summons a flock of bats and you gain the night vision ability
 item.morphspellpack:ring_bat.name=Bat Ring
 item.morphspellpack:ring_phoenix.desc=The Phoenix Rise spell summons a Firestorm
