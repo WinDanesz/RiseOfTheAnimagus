@@ -10,6 +10,7 @@ import com.windanesz.wizardryutils.entity.ai.EntityAIMinionOwnerHurtTarget;
 import com.windanesz.wizardryutils.integration.baubles.BaublesIntegration;
 import electroblob.wizardry.item.ItemArtefact;
 import electroblob.wizardry.item.SpellActions;
+import electroblob.wizardry.registry.WizardryItems;
 import electroblob.wizardry.spell.Spell;
 import electroblob.wizardry.util.BlockUtils;
 import electroblob.wizardry.util.SpellModifiers;
@@ -98,7 +99,7 @@ public class SoulConjuration extends Spell {
 
 					SummonedCreatureData data = SummonedCreatureData.get((EntityLivingBase) minion);
 					if (data == null) return false;
-					data.setLifetime(getProperty(DURATION).intValue());
+					data.setLifetime((int) (getProperty(DURATION).intValue() * modifiers.get(WizardryItems.duration_upgrade)));
 					data.setFollowOwner(true);
 					data.setCaster(caster);
 					((EntityLivingBase) minion).addPotionEffect(new PotionEffect(MSPotions.conjured_soul, Integer.MAX_VALUE));
