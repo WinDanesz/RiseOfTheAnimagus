@@ -34,9 +34,9 @@ public class ClientEventHandler {
 		ScaledResolution res = event.getResolution();
 		Minecraft mc = Minecraft.getMinecraft();
 
-		if (mc.getRenderViewEntity() instanceof EntityPlayer) {
+		if (Minecraft.getMinecraft().player instanceof EntityPlayer) {
 
-			EntityPlayer player = (EntityPlayer) mc.getRenderViewEntity();
+			EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().player;
 			if (player.isSpectator()) {
 				return; // Spectators shouldn't have HUD changes
 			}
