@@ -7,6 +7,7 @@ import com.windanesz.morphspellpack.ability.active.AbilitySelfDetonate;
 import com.windanesz.morphspellpack.ability.active.AbilitySpell;
 import com.windanesz.morphspellpack.ability.active.AbilitySpellFromArtefact;
 import com.windanesz.morphspellpack.ability.active.AbilityTimedPotion;
+import com.windanesz.morphspellpack.ability.active.AbilityWaterBreath;
 import com.windanesz.morphspellpack.ability.active.AbilityWebWalk;
 import com.windanesz.morphspellpack.ability.trait.AbilityHover;
 import com.windanesz.morphspellpack.ability.trait.AbilityHoverTogglable;
@@ -25,5 +26,6 @@ public class MSAbilityHandler {
 		AbilityHandler.getInstance().registerAbility(AbilityTimedPotion.name, AbilityTimedPotion.class);
 		AbilityHandler.getInstance().registerAbility(AbilityLichPhylactery.name, AbilityLichPhylactery.class);
 		AbilityHandler.getInstance().registerAbility(AbilityPotionResistance.name, AbilityPotionResistance.class);
+		AbilityHandler.getInstance().registerAbility(AbilityWaterBreath.name, AbilityWaterBreath.class);
 	}
 }

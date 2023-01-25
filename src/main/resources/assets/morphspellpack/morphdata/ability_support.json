@@ -41,7 +41,8 @@
         "hoverWithToggle",
         "flightFlap",
         "sunburn",
-        "spellCast|ebwizardry:life_drain,80"
+        "spellCast|ebwizardry:life_drain,80",
+        "waterBreath"
     ],
     "electroblob.wizardry.entity.living.EntityIceWraith": [
         "hover",
