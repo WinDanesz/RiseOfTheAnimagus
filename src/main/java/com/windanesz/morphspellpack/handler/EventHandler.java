@@ -81,7 +81,7 @@ public final class EventHandler {
 					boolean foundEmpty = false;
 					for (ItemStack stack : InventoryUtils.getHotbar((EntityPlayer) event.getSource().getTrueSource())) {
 						if (stack.getItem() instanceof ItemSoulPhylactery) {
-							if (ItemSoulPhylactery.getEntity(stack).equals(entity)) {
+							if (ItemSoulPhylactery.getEntity(stack).equals(entity) && ItemSoulPhylactery.getPercentFilled(stack) < 1f) {
 								ItemSoulPhylactery.addPercent(stack, Settings.generalSettings.soul_phylactery_percent_gain_per_kill);
 								return;
 							} else if (!ItemSoulPhylactery.hasEntity(stack)) {
