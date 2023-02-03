@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.2] - 2023-02-03
+### :sparkles: New Features
+- [`1f3fa6a`](https://github.com/WinDanesz/RiseOfTheAnimagus/commit/1f3fa6a3979430e539219533755b8a66a637cb6c) - Added Chinese translation (by LILPR1NC3) *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+- [`2689ab5`](https://github.com/WinDanesz/RiseOfTheAnimagus/commit/2689ab509ba0bcf81539e7749c417cc01d988eb1) - Liches can fill Soul phials from their hotbar *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+
+### :bug: Bug Fixes
+- [`1cdb2ee`](https://github.com/WinDanesz/RiseOfTheAnimagus/commit/1cdb2ee36e4ef09a950efba48cc101046ee618c5) - Won't spawn lich particles when the invisibility potion effect is active. Fixes [#14](https://github.com/WinDanesz/RiseOfTheAnimagus/pull/14) *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+- [`87f6e6d`](https://github.com/WinDanesz/RiseOfTheAnimagus/commit/87f6e6de79f12dae28f65522ed361f9987dc0bd6) - Liches can't drown in water anymore (as they are undead). Fixes [#16](https://github.com/WinDanesz/RiseOfTheAnimagus/pull/16) *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+- [`0160cc4`](https://github.com/WinDanesz/RiseOfTheAnimagus/commit/0160cc4b9bdf003ed4a01e61001d7c00fb82964a) - Fixed some typos. Fixes [#1](https://github.com/WinDanesz/RiseOfTheAnimagus/pull/1) *(commit by [@WinDanesz](https://github.com/WinDanesz))*
+
+
 ## [v1.0.1] - 2022-10-16
 ### :sparkles: New Features
 - [`80187b2`](https://github.com/WinDanesz/BackportedStuff/commit/80187b2727cfc10695219c2e66d3b2871274e971) - Added Polished Deepslate, Deepslate Brick and all of their block variants *(commit by [@WinDanesz](https://github.com/WinDanesz))*
@@ -16,3 +27,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [v1.0.1]: https://github.com/WinDanesz/BackportedStuff/compare/v1.0.0...v1.0.1
+[v1.0.2]: https://github.com/WinDanesz/RiseOfTheAnimagus/compare/v1.0.1...v1.0.2
