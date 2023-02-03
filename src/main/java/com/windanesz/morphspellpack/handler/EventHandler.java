@@ -16,6 +16,7 @@ import electroblob.wizardry.registry.WizardryItems;
 import electroblob.wizardry.registry.WizardryPotions;
 import electroblob.wizardry.spell.Spell;
 import electroblob.wizardry.spell.SpellMinion;
+import electroblob.wizardry.util.InventoryUtils;
 import electroblob.wizardry.util.SpellModifiers;
 import me.ichun.mods.morph.api.event.MorphAcquiredEvent;
 import me.ichun.mods.morph.api.event.MorphEvent;
@@ -73,7 +74,33 @@ public final class EventHandler {
 		} else {
 			if (event.getSource() != null && event.getSource().getTrueSource() instanceof EntityPlayer) {
 				EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-				if (ItemArtefact.isArtefactActive(player, MSItems.charm_soul_phylactery)) {
+
+				// Liches can refill phys from the hotbar
+				if (LichHandler.isLich(player)) {
+					String entity = EntityList.getKey(event.getEntityLiving()).toString();
+					boolean foundEmpty = false;
+					for (ItemStack stack : InventoryUtils.getHotbar((EntityPlayer) event.getSource().getTrueSource())) {
+						if (stack.getItem() instanceof ItemSoulPhylactery) {
+							if (ItemSoulPhylactery.getEntity(stack).equals(entity)) {
+								ItemSoulPhylactery.addPercent(stack, Settings.generalSettings.soul_phylactery_percent_gain_per_kill);
+								return;
+							} else if (!ItemSoulPhylactery.hasEntity(stack)) {
+								foundEmpty = true;
+							}
+						}
+					}
+
+					// find the first empty slot if no match was found
+					if (foundEmpty) {
+						for (ItemStack stack : InventoryUtils.getHotbar((EntityPlayer) event.getSource().getTrueSource())) {
+							if (stack.getItem() instanceof ItemSoulPhylactery && !ItemSoulPhylactery.hasEntity(stack)) {
+								ItemSoulPhylactery.setEntity(stack, entity);
+								ItemSoulPhylactery.addPercent(stack, Settings.generalSettings.soul_phylactery_percent_gain_per_kill);
+								return;
+							}
+						}
+					}
+				} else if (ItemArtefact.isArtefactActive(player, MSItems.charm_soul_phylactery)) {
 					ItemStack stack = BaublesIntegration.getEquippedArtefactStacks(player, ItemArtefact.Type.CHARM).get(0);
 					String entity = EntityList.getKey(event.getEntityLiving()).toString();
 					if (!ItemSoulPhylactery.hasEntity(stack)) {
