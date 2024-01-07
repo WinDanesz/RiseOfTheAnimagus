@@ -54,6 +54,10 @@ public class Settings {
 		@Config.Comment("If true: the Soul Phylactery - mob list acts as a blacklist. If False, the list acts as an entity whitelist")
 		public boolean soul_phylactery_list_is_blacklist = true;
 
+		@Config.Name("Lich Tweak - Take Damage without Soul Phylactery")
+		@Config.Comment("If true: the lich takes damage if they don't have the soul phylactery")
+		public boolean soul_phylactery_requirement = true;
+
 		@Config.Name("Soul Phylactery - mob list")
 		@Config.Comment("Also see the other related setting")
 		public String[] soul_phylactery_mob_list = {"minecraft:dragon", "minecraft:wither"};
