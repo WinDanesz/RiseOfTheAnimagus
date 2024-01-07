@@ -30,8 +30,6 @@ public class PacketToggleAbility implements IMessageHandler<PacketToggleAbility.
 	}
 
 	private void toggleAbility(EntityPlayerMP player) {
-		// TODO
-		MorphSpellPack.logger.info("Ability toggled, yeeey");
 		MorphInfo info = Morph.eventHandlerServer.morphsActive.get(player.getName());
 
 		if (info != null) {

@@ -42,7 +42,6 @@ public class ControlHandler {
 	}
 
 	private static void toggleAbility(EntityPlayer player) {
-		System.out.println("Ability toggled");
 		IMessage msg = new PacketToggleAbility.Message();
 		MSPacketHandler.net.sendToServer(msg);
 	}
