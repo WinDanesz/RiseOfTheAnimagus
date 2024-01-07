@@ -27,6 +27,7 @@ import org.lwjgl.input.Keyboard;
 public class ClientProxy extends CommonProxy {
 
 	public static KeyBinding KEY_ACTIVATE_MORPH_ABILITY;
+	public static KeyBinding KEY_TOGGLE_LICH_FLIGHT;
 
 	/**
 	 * Called from preInit() in the main mod class to initialise the renderers.
@@ -58,5 +59,7 @@ public class ClientProxy extends CommonProxy {
 		// Initializing
 		KEY_ACTIVATE_MORPH_ABILITY = new KeyBinding("key.morphspellpack.activate_morph_ability", Keyboard.KEY_K, "key.morphspellpack.category");
 		ClientRegistry.registerKeyBinding(KEY_ACTIVATE_MORPH_ABILITY);
+		KEY_TOGGLE_LICH_FLIGHT = new KeyBinding("key.morphspellpack.key_toggle_lich_flight", Keyboard.KEY_O, "key.morphspellpack.category");
+		ClientRegistry.registerKeyBinding(KEY_TOGGLE_LICH_FLIGHT);
 	}
 }

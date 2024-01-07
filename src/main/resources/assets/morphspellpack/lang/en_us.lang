@@ -1,8 +1,8 @@
 
 # Generic
-
 key.morphspellpack.category=Rise of the Animagus (MorphSpellPack)
 key.morphspellpack.activate_morph_ability=Morph Active Ability (Toggle)
+commands.morphspellpack:setlich.usage=/%1$s
 entity.morphspellpack:bat_minion.name=Bat
 entity.morphspellpack:disguise.name=I'm just a block, trust me!
 entity.morphspellpack:light_wisp.name=Light Wisp
@@ -102,3 +102,4 @@ spelltype.transformation=Transformation
 
 gui.morphspellpack:lich_tome.title=Ritual of the Lich
 gui.morphspellpack:lich_tome.desc=Liches are powerful undead beings, born when a wizard seals his own soul in a Soul Phylactery by burning up his body in fire. The transformation is permanent. A wizard must hold this tome, have an empty phylactery equipped, and create an altar of 8 soul sands and 4 skulls, setting a fire in the middle with the skulls facing it. Liches cannot eat and must drink from Soul Phylacteries to sustain themselves. Liches must always wear their phylactery, or they very quickly disintegrate. If the phylactery breaks, they can create a new one with the same ritual to seal their soul again. Wearing phylacteries of other entities only provide a temporary remedy for them.
+

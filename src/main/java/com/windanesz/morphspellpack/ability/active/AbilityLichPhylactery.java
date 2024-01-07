@@ -27,7 +27,7 @@ public class AbilityLichPhylactery extends Ability {
 	@Override
 	public void tick() {
 		boolean hurtLich = true;
-		if (Settings.generalSettings.soul_phylactery_requirement && getParent() instanceof EntityPlayer && getParent().ticksExisted % 20 == 0 && !((EntityPlayer) getParent()).isCreative()) {
+		if (Settings.generalSettings.soul_phylactery_requirement && getParent() instanceof EntityPlayer && getParent().ticksExisted % 40 == 0 && !((EntityPlayer) getParent()).isCreative()) {
 			EntityPlayer lich = (EntityPlayer) getParent();
 			if (ItemArtefact.isArtefactActive(lich, MSItems.charm_soul_phylactery)) {
 				ItemStack phylactery = BaublesIntegration.getEquippedArtefactStacks(lich, ItemArtefact.Type.CHARM).get(0);

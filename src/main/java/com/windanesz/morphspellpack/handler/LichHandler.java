@@ -67,5 +67,4 @@ public class LichHandler {
 			SpellTransformation.morphPlayer((EntityPlayer) event.getEntity(), LichHandler.LICH, -1);
 		}
 	}
-
 }

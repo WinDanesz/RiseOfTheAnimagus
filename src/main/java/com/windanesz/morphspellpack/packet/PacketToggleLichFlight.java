@@ -2,6 +2,7 @@ package com.windanesz.morphspellpack.packet;
 
 import com.windanesz.morphspellpack.ability.IActiveAbility;
 import com.windanesz.morphspellpack.ability.trait.AbilityHoverTogglable;
+import com.windanesz.morphspellpack.handler.LichHandler;
 import io.netty.buffer.ByteBuf;
 import me.ichun.mods.morph.api.ability.Ability;
 import me.ichun.mods.morph.common.Morph;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 /**
  * <b>[Client -> Server]</b> This packet is for handling the ability toggle.
  */
-public class PacketToggleAbility implements IMessageHandler<PacketToggleAbility.Message, IMessage> {
+public class PacketToggleLichFlight implements IMessageHandler<PacketToggleLichFlight.Message, IMessage> {
 
 	@Override
 	public IMessage onMessage(Message message, MessageContext ctx) {
@@ -24,18 +25,18 @@ public class PacketToggleAbility implements IMessageHandler<PacketToggleAbility.
 		// Just to make sure that the side is correct
 		if (ctx.side.isServer()) {
 			final EntityPlayerMP player = ctx.getServerHandler().player;
-			player.getServerWorld().addScheduledTask(() -> toggleAbility(player));
+			player.getServerWorld().addScheduledTask(() -> toggleLichFlight(player));
 		}
 		return null;
 	}
 
-	private void toggleAbility(EntityPlayerMP player) {
+	private void toggleLichFlight(EntityPlayerMP player) {
 		MorphInfo info = Morph.eventHandlerServer.morphsActive.get(player.getName());
 
 		if (info != null) {
 			ArrayList<Ability> list = info.nextState.abilities;
 			for (Ability ability : list) {
-				if (ability instanceof IActiveAbility && !(ability instanceof AbilityHoverTogglable)) {
+				if (ability instanceof AbilityHoverTogglable) {
 					((IActiveAbility) ability).toggleAbility();
 				}
 			}

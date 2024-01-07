@@ -1,6 +1,7 @@
 package com.windanesz.morphspellpack;
 
 import com.windanesz.morphspellpack.client.gui.MSGuiHandler;
+import com.windanesz.morphspellpack.command.CommandSetLich;
 import com.windanesz.morphspellpack.handler.LichHandler;
 import com.windanesz.morphspellpack.handler.MSAbilityHandler;
 import com.windanesz.morphspellpack.packet.MSPacketHandler;
@@ -65,6 +66,8 @@ public class MorphSpellPack {
 	}
 
 	@EventHandler
-	public void serverStartup(FMLServerStartingEvent event) { }
+	public void serverStarting(FMLServerStartingEvent event) {
+		event.registerServerCommand(new CommandSetLich());
+	}
 
 }

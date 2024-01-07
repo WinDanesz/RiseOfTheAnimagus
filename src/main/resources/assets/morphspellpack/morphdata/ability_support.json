@@ -35,8 +35,6 @@
     ],
     "com.windanesz.morphspellpack.entity.living.EntityLich": [
         "lichNeedsPhylactery",
-        "float|-0.114,true",
-        "poisonResistance",
         "potionResistance|minecraft:regeneration,minecraft:saturation,minecraft:instant_health,minecraft:hunger,minecraft:nausea",
         "hoverWithToggle",
         "flightFlap",

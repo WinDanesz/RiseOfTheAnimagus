@@ -5,6 +5,7 @@ import electroblob.wizardry.util.BlockUtils;
 import me.ichun.mods.morph.api.ability.Ability;
 import me.ichun.mods.morph.common.Morph;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -18,6 +19,7 @@ public class AbilityHoverTogglable extends Ability implements IActiveAbility {
 	public transient int limitCount;
 	public transient boolean sneakHeld;
 	public transient boolean enabled = true;
+	public Double floatMotion;
 
 	@Override
 	public String getType() {
@@ -26,9 +28,9 @@ public class AbilityHoverTogglable extends Ability implements IActiveAbility {
 
 	@Override
 	public void init() {
-		onGround = false;
-		limitCount = limit != null ? limit : -1;
-		sneakHeld = false;
+//		onGround = false;
+//		limitCount = limit != null ? limit : -1;
+//		sneakHeld = false;
 	}
 
 	@Override
@@ -36,15 +38,29 @@ public class AbilityHoverTogglable extends Ability implements IActiveAbility {
 		if (getParent().world.isRemote) return;
 		if (!enabled) { return; }
 
+			double floatm = this.floatMotion != null ? this.floatMotion : -0.114;
+			EntityLivingBase var10000;
+			if (this.getParent().motionY < floatm) {
+  				var10000 = this.getParent();
+				var10000.motionY -= this.getParent().motionY * (double)this.getStrength();
+				var10000 = this.getParent();
+				var10000.motionY += floatm * (double)this.getStrength();
+			}
 
-		if (Morph.config.enableFlight == 0) {
-			return;
+			var10000 = this.getParent();
+			var10000.fallDistance -= this.getParent().fallDistance * this.getStrength();
 		}
-		if (getParent().world.isRemote) {
-			tickClient();
-		}
-		getParent().fallDistance -= getParent().fallDistance * getStrength();
-	}
+
+
+
+//		if (Morph.config.enableFlight == 0) {
+//			return;
+//		}
+//		if (getParent().world.isRemote) {
+//			tickClient();
+//		}
+//		getParent().fallDistance -= getParent().fallDistance * getStrength();
+//	}
 
 	@SideOnly(Side.CLIENT)
 	public void tickClient() {
@@ -67,8 +83,6 @@ public class AbilityHoverTogglable extends Ability implements IActiveAbility {
 
 	@Override
 	public void toggleAbility() {
-		if (getParent().isSneaking()) {
 			enabled = !enabled;
-		}
 	}
 }
