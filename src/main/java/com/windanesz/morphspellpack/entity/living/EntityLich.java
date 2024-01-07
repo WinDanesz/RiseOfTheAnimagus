@@ -10,6 +10,7 @@ public class EntityLich extends EntityStray {
 
 	public EntityLich(World worldIn) {
 		super(worldIn);
+		this.setSize(0.6F, 1.8F);
 	}
 
 	@Override
