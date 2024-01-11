@@ -10,11 +10,11 @@
 	"trades": true,
     "looting": true
   },
-  "tier": "advanced",
+  "tier": "apprentice",
   "element": "necromancy",
   "type": "transformation",
   "cost": 50,
-  "chargeup": 10,
+  "chargeup": 20,
   "cooldown": 100,
   "base_properties": {
     "duration": 240
