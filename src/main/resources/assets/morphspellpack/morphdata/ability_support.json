@@ -49,10 +49,10 @@
     "net.minecraft.entity.monster.EntityCreeper": [
         "selfDetonate|true,false,1.5f"
     ],
-    "net.minecraft.entity.monster.EntitySpider": [
+    "electroblob.wizardry.entity.living.EntitySpiderMinion": [
         "climb",
         "hostile",
         "webWalk",
-        "spellCastWithArtefact|ebwizardry:cobwebs,40,morphspellpack:ring_web"
+        "spellCastWithArtefact|ebwizardry:cobwebs,40,morphspellpack:ring_web,0"
     ]
 }

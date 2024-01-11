@@ -22,26 +22,29 @@ public class AbilitySpell extends Ability implements IActiveAbility {
 
 	public int cooldown = 0;
 	public int maxCooldown = 0;
+	public int duration = 0;
 
 	@SuppressWarnings("unused")
 	public AbilitySpell() {
 	}
 
-	public AbilitySpell(Spell spell, int maxCooldown) {
+	public AbilitySpell(Spell spell, int maxCooldown, int duration) {
 		this.spell = spell;
 		this.maxCooldown = maxCooldown;
+		this.duration = duration;
 	}
 
 	@Override
 	public Ability parse(String[] args) {
 		spell = Spell.get(args[0]);
 		maxCooldown = Integer.parseInt(args[1]);
+		duration = Integer.parseInt(args[2]);
 		return this;
 	}
 
 	@Override
 	public Ability clone() {
-		return new AbilitySpell(spell, maxCooldown);
+		return new AbilitySpell(spell, maxCooldown, duration);
 	}
 
 	@Override
@@ -69,15 +72,9 @@ public class AbilitySpell extends Ability implements IActiveAbility {
 					// Events/packets for continuous spell casting via commands are dealt with in WizardData.
 
 					if (data != null) {
-
-						if (data.isCasting()) {
-							data.stopCastingContinuousSpell();
-						} else {
 							SpellModifiers modifiers = new SpellModifiers();
-							int duration = 60;
 							data.startCastingContinuousSpell(spell, modifiers, duration);
-							cooldown = maxCooldown;
-						}
+							cooldown = 0;
 					}
 
 				} else {

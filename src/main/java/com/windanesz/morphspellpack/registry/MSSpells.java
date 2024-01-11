@@ -6,6 +6,7 @@ import com.windanesz.morphspellpack.entity.living.EntityLightWisp;
 import com.windanesz.morphspellpack.entity.projectile.EntityRadiantSpark;
 import com.windanesz.morphspellpack.spell.CurseOfTransformation;
 import com.windanesz.morphspellpack.spell.Demorph;
+import com.windanesz.morphspellpack.spell.LichFlight;
 import com.windanesz.morphspellpack.spell.Rabbitify;
 import com.windanesz.morphspellpack.spell.ShapeBinding;
 import com.windanesz.morphspellpack.spell.ShapeLock;
@@ -54,6 +55,7 @@ public final class MSSpells {
 	public static final Spell shape_binding = placeholder();
 	public static final Spell soul_conjuration = placeholder();
 	public static final Spell true_resurrection = placeholder();
+	public static final Spell lich_flight = placeholder();
 
 	private MSSpells() {} // no instances
 
@@ -85,7 +87,7 @@ public final class MSSpells {
 		registry.register(new SpellTransformation("shadow_wraith_form", SpellActions.SUMMON, false, "ebwizardry:shadow_wraith"));
 		registry.register(new SpellTransformation("ice_wraith_form", SpellActions.SUMMON, false, "ebwizardry:ice_wraith"));
 		registry.register(new SpellTransformation("lightning_wraith_form", SpellActions.SUMMON, false, "ebwizardry:lightning_wraith"));
-		registry.register(new SpellTransformation("spider_form", SpellActions.SUMMON, false, "minecraft:spider"));
+		registry.register(new SpellTransformation("spider_form", SpellActions.SUMMON, false, "ebwizardry:spider_minion"));
 		registry.register(new SpellTransformation("phoenix_form", SpellActions.SUMMON, false, "ebwizardry:phoenix"));
 		registry.register(new SpellTransformation("creeper_form", SpellActions.SUMMON, false, "minecraft:creeper"));
 		registry.register(new SpellTransformation("disguise", SpellActions.SUMMON, false, "morphspellpack:disguise"));
@@ -103,6 +105,7 @@ public final class MSSpells {
 		registry.register(new ShapeBinding());
 		registry.register(new SoulConjuration());
 		registry.register(new TrueResurrection());
+		registry.register(new LichFlight());
 
 	}
 }

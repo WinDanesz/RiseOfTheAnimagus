@@ -13,15 +13,17 @@ public class AbilitySpellFromArtefact extends AbilitySpell {
 	public static final String name = "spellCastWithArtefact";
 	private Item artefact;
 
-	public AbilitySpellFromArtefact(Spell spell, int maxCooldown, Item artefact) {
-		super(spell, maxCooldown);
+	public AbilitySpellFromArtefact(Spell spell, int maxCooldown, Item artefact, int duration) {
+		super(spell, maxCooldown, duration);
 		this.artefact = artefact;
 	}
 
 	@Override
 	public Ability parse(String[] args) {
-		super.parse(args);
+		spell = Spell.get(args[0]);
+		maxCooldown = Integer.parseInt(args[1]);
 		artefact = ForgeRegistries.ITEMS.getValue(new ResourceLocation(args[2]));
+		duration = Integer.parseInt(args[3]);
 		return this;
 	}
 
@@ -32,7 +34,7 @@ public class AbilitySpellFromArtefact extends AbilitySpell {
 
 	@Override
 	public Ability clone() {
-		return new AbilitySpellFromArtefact(spell,maxCooldown, artefact);
+		return new AbilitySpellFromArtefact(spell,maxCooldown, artefact, duration);
 	}
 
 	@Override
