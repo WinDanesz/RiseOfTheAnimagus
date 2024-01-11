@@ -45,7 +45,7 @@
         "spellCast|ebwizardry:ice_shard,20,0"
     ],
     "net.minecraft.entity.monster.EntityCreeper": [
-        "selfDetonate|true,false,1.5f"
+        "selfDetonate|true,false,3f"
     ],
     "electroblob.wizardry.entity.living.EntitySpiderMinion": [
         "climb",
