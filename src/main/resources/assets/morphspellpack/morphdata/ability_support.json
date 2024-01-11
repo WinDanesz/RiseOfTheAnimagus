@@ -20,11 +20,13 @@
         "hover",
         "fireImmunity",
         "waterAllergy",
-        "spellCast|ebwizardry:fireball,30,0"
+        "spellCast|ebwizardry:fireball,30,0",
+        "flightFlap"
     ],
     "electroblob.wizardry.entity.living.EntityLightningWraith": [
         "hover",
-        "spellCast|ebwizardry:lightning_disc,60,0"
+        "spellCast|ebwizardry:lightning_disc,60,0",
+        "flightFlap"
     ],
     "electroblob.wizardry.entity.living.EntityShadowWraith": [
         "flightFlap",
@@ -42,7 +44,8 @@
     ],
     "electroblob.wizardry.entity.living.EntityIceWraith": [
         "hover",
-        "spellCast|ebwizardry:ice_shard,20,0"
+        "spellCast|ebwizardry:ice_shard,20,0",
+        "flightFlap"
     ],
     "net.minecraft.entity.monster.EntityCreeper": [
         "selfDetonate|true,false,3f"
