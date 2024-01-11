@@ -1,7 +1,7 @@
 {
     "electroblob.wizardry.entity.living.EntityPhoenix": [
         "flightFlap",
-        "spellCast|ebwizardry:fire_breath,0",
+        "spellCast|ebwizardry:fire_breath,0,60",
         "fireImmunity",
         "hover"
     ],
@@ -11,7 +11,7 @@
     ],
     "com.windanesz.morphspellpack.entity.living.EntityChicken": [
         "flightFlap",
-        "spellCastWithArtefact|ebwizardry:life_drain,0,morphspellpack:ring_bat"
+        "spellCastWithArtefact|ebwizardry:life_drain,0,morphspellpack:ring_bat,60"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityDisguise": [
         "disguise"
@@ -20,15 +20,15 @@
         "hover",
         "fireImmunity",
         "waterAllergy",
-        "spellCast|ebwizardry:fireball,30"
+        "spellCast|ebwizardry:fireball,30,0"
     ],
     "electroblob.wizardry.entity.living.EntityLightningWraith": [
         "hover",
-        "spellCast|ebwizardry:lightning_disc,60"
+        "spellCast|ebwizardry:lightning_disc,60,0"
     ],
     "electroblob.wizardry.entity.living.EntityShadowWraith": [
         "flightFlap",
-        "spellCast|morphspellpack:shadow_wraith_form,10"
+        "spellCast|morphspellpack:shadow_wraith_form,10,10"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityLightWisp": [
         "flightFlap"
@@ -36,15 +36,13 @@
     "com.windanesz.morphspellpack.entity.living.EntityLich": [
         "lichNeedsPhylactery",
         "potionResistance|minecraft:regeneration,minecraft:saturation,minecraft:instant_health,minecraft:hunger,minecraft:nausea",
-        "hoverWithToggle",
-        "flightFlap",
         "sunburn",
-        "spellCast|ebwizardry:life_drain,80",
+        "spellCast|morphspellpack:lich_flight,5,60000",
         "waterBreath"
     ],
     "electroblob.wizardry.entity.living.EntityIceWraith": [
         "hover",
-        "spellCast|ebwizardry:ice_shard,20"
+        "spellCast|ebwizardry:ice_shard,20,0"
     ],
     "net.minecraft.entity.monster.EntityCreeper": [
         "selfDetonate|true,false,1.5f"

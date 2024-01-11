@@ -14,7 +14,6 @@ public class MSPacketHandler {
 	public static void initPackets(){
 		net = NetworkRegistry.INSTANCE.newSimpleChannel(MorphSpellPack.MODID.toUpperCase());
 		registerMessage(PacketToggleAbility.class, PacketToggleAbility.Message.class);
-		registerMessage(PacketToggleLichFlight.class, PacketToggleLichFlight.Message.class);
 	}
 
 	private static int nextPacketId = 0;

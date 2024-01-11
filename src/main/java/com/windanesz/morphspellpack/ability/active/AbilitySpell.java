@@ -72,9 +72,15 @@ public class AbilitySpell extends Ability implements IActiveAbility {
 					// Events/packets for continuous spell casting via commands are dealt with in WizardData.
 
 					if (data != null) {
+
+						//if (data.isCasting()) {
+						//	data.stopCastingContinuousSpell();
+						//} else {
 							SpellModifiers modifiers = new SpellModifiers();
+							int duration = 60000;
 							data.startCastingContinuousSpell(spell, modifiers, duration);
 							cooldown = 0;
+						//}
 					}
 
 				} else {

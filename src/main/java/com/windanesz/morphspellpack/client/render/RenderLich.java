@@ -53,6 +53,8 @@ public class RenderLich extends RenderBiped<EntityLich> {
 	public void doRender(EntityLich entity, double x, double y, double z, float entityYaw, float partialTicks) {
 		super.doRender(entity, x, y, z, entityYaw, partialTicks);
 		if (!entity.isInvisible()) {
+			float spin = entity.onGround ? 0 : 0.05f;
+			float radius = entity.onGround ? 0 : 0.2f;
 			for (int i = 0; i < 2; i++) {
 				ParticleBuilder.create(ParticleBuilder.Type.FLASH)
 						.entity(entity)
@@ -61,6 +63,7 @@ public class RenderLich extends RenderBiped<EntityLich> {
 						.vel(0, -1 * (entity.world.rand.nextFloat() / 5), 0)
 						.scale(entity.world.rand.nextFloat() / 2)
 						.clr(2, 199, 140)
+						.spin(radius, spin)
 						.spawn(entity.world);
 			}
 			if (entity.ticksExisted % 5 == 0) {
@@ -70,6 +73,7 @@ public class RenderLich extends RenderBiped<EntityLich> {
 						.pos(0, 1f, 0)
 						.spin(0.1, 0.1)
 						.clr(2, 199, 140)
+						.spin(radius,spin)
 						.spawn(entity.world);
 				ParticleBuilder.create(ParticleBuilder.Type.FLASH)
 						.entity(entity)

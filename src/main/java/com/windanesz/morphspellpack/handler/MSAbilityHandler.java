@@ -19,7 +19,6 @@ public class MSAbilityHandler {
 		AbilityHandler.getInstance().registerAbility(AbilitySpell.name, AbilitySpell.class);
 		AbilityHandler.getInstance().registerAbility(AbilitySpellFromArtefact.name, AbilitySpellFromArtefact.class);
 		AbilityHandler.getInstance().registerAbility(AbilityHover.name, AbilityHover.class);
-		AbilityHandler.getInstance().registerAbility(AbilityHoverTogglable.name, AbilityHoverTogglable.class);
 		AbilityHandler.getInstance().registerAbility(AbilitySelfDetonate.name, AbilitySelfDetonate.class);
 		AbilityHandler.getInstance().registerAbility(AbilityWebWalk.name, AbilityWebWalk.class);
 		AbilityHandler.getInstance().registerAbility(AbilityDisguise.name, AbilityDisguise.class);

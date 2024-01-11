@@ -3,7 +3,6 @@ package com.windanesz.morphspellpack.client;
 import com.windanesz.morphspellpack.MorphSpellPack;
 import com.windanesz.morphspellpack.packet.MSPacketHandler;
 import com.windanesz.morphspellpack.packet.PacketToggleAbility;
-import com.windanesz.morphspellpack.packet.PacketToggleLichFlight;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +15,6 @@ import net.minecraftforge.fml.relauncher.Side;
 public class MorphSpellPackControlHandler {
 
 	static boolean abilityKeyPressed = false;
-	static boolean lichFlightToggled = false;
 
 	@SubscribeEvent
 	public static void onTickEvent(TickEvent.ClientTickEvent event) {
@@ -39,25 +37,12 @@ public class MorphSpellPackControlHandler {
 				} else {
 					abilityKeyPressed = false;
 				}
-				if (ClientProxy.KEY_TOGGLE_LICH_FLIGHT.isKeyDown() && Minecraft.getMinecraft().inGameHasFocus) {
-					if (!lichFlightToggled) {
-						lichFlightToggled = true;
-						toggleLichFlight(player);
-					}
-				} else {
-					lichFlightToggled = false;
-				}
 			}
 		}
 	}
 
 	private static void toggleAbility(EntityPlayer player) {
 		IMessage msg = new PacketToggleAbility.Message();
-		MSPacketHandler.net.sendToServer(msg);
-	}
-
-	private static void toggleLichFlight(EntityPlayer player) {
-		IMessage msg = new PacketToggleLichFlight.Message();
 		MSPacketHandler.net.sendToServer(msg);
 	}
 }

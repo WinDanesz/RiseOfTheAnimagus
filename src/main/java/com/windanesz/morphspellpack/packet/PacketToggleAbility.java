@@ -1,7 +1,6 @@
 package com.windanesz.morphspellpack.packet;
 
 import com.windanesz.morphspellpack.ability.IActiveAbility;
-import com.windanesz.morphspellpack.ability.trait.AbilityHoverTogglable;
 import io.netty.buffer.ByteBuf;
 import me.ichun.mods.morph.api.ability.Ability;
 import me.ichun.mods.morph.common.Morph;
@@ -35,7 +34,7 @@ public class PacketToggleAbility implements IMessageHandler<PacketToggleAbility.
 		if (info != null) {
 			ArrayList<Ability> list = info.nextState.abilities;
 			for (Ability ability : list) {
-				if (ability instanceof IActiveAbility && !(ability instanceof AbilityHoverTogglable)) {
+				if (ability instanceof IActiveAbility) {
 					((IActiveAbility) ability).toggleAbility();
 				}
 			}

@@ -28,9 +28,9 @@ public class AbilityHoverTogglable extends Ability implements IActiveAbility {
 
 	@Override
 	public void init() {
-//		onGround = false;
-//		limitCount = limit != null ? limit : -1;
-//		sneakHeld = false;
+		onGround = false;
+		limitCount = limit != null ? limit : -1;
+		sneakHeld = false;
 	}
 
 	@Override
@@ -39,16 +39,18 @@ public class AbilityHoverTogglable extends Ability implements IActiveAbility {
 		if (!enabled) { return; }
 
 			double floatm = this.floatMotion != null ? this.floatMotion : -0.114;
-			EntityLivingBase var10000;
+			System.out.println("floatm " + floatm);
+			EntityLivingBase player;
 			if (this.getParent().motionY < floatm) {
-  				var10000 = this.getParent();
-				var10000.motionY -= this.getParent().motionY * (double)this.getStrength();
-				var10000 = this.getParent();
-				var10000.motionY += floatm * (double)this.getStrength();
+				System.out.println("her");
+  				player = this.getParent();
+				player.motionY -= this.getParent().motionY * (double)this.getStrength();
+				player = this.getParent();
+				player.motionY += floatm * (double)this.getStrength();
 			}
 
-			var10000 = this.getParent();
-			var10000.fallDistance -= this.getParent().fallDistance * this.getStrength();
+			player = this.getParent();
+			player.fallDistance -= this.getParent().fallDistance * this.getStrength();
 		}
 
 
