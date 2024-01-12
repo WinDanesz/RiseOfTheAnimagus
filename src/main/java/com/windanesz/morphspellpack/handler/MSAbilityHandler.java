@@ -1,6 +1,7 @@
 package com.windanesz.morphspellpack.handler;
 
 import com.windanesz.morphspellpack.ability.active.AbilityDisguise;
+import com.windanesz.morphspellpack.ability.active.AbilityItemSpawn;
 import com.windanesz.morphspellpack.ability.active.AbilityLichPhylactery;
 import com.windanesz.morphspellpack.ability.active.AbilityPotionResistance;
 import com.windanesz.morphspellpack.ability.active.AbilitySelfDetonate;
@@ -26,5 +27,6 @@ public class MSAbilityHandler {
 		AbilityHandler.getInstance().registerAbility(AbilityLichPhylactery.name, AbilityLichPhylactery.class);
 		AbilityHandler.getInstance().registerAbility(AbilityPotionResistance.name, AbilityPotionResistance.class);
 		AbilityHandler.getInstance().registerAbility(AbilityWaterBreath.name, AbilityWaterBreath.class);
+		AbilityHandler.getInstance().registerAbility(AbilityItemSpawn.name, AbilityItemSpawn.class);
 	}
 }

@@ -9,9 +9,9 @@
         "flightFlap",
         "timedPotion|minecraft:night_vision,300,300,morphspellpack:ring_bat"
     ],
-    "com.windanesz.morphspellpack.entity.living.EntityChicken": [
+    "net.minecraft.entity.passive.EntityChicken": [
         "flightFlap",
-        "spellCastWithArtefact|ebwizardry:life_drain,0,morphspellpack:ring_bat,60"
+        "itemSpawn|minecraft:feather,1,600,true"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityDisguise": [
         "disguise"
@@ -33,7 +33,7 @@
         "spellCast|morphspellpack:shadow_wraith_form,10,10"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityLightWisp": [
-        "flightFlap"
+        "fly"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityLich": [
         "lichNeedsPhylactery",
