@@ -1,5 +1,6 @@
 package com.windanesz.morphspellpack.handler;
 
+import com.windanesz.morphspellpack.registry.MSPotions;
 import com.windanesz.morphspellpack.spell.SpellTransformation;
 import electroblob.wizardry.data.IStoredVariable;
 import electroblob.wizardry.data.Persistence;
@@ -63,7 +64,7 @@ public class LichHandler {
 
 	@SubscribeEvent
 	public static void onEntityJoinWorld(EntityJoinWorldEvent event) {
-		if (event.getEntity() instanceof EntityPlayer && isLich(event.getEntity())) {
+		if (event.getEntity() instanceof EntityPlayer && isLich(event.getEntity()) && !((EntityPlayer) event.getEntity()).isPotionActive(MSPotions.curse_of_transformation)) {
 			SpellTransformation.morphPlayer((EntityPlayer) event.getEntity(), LichHandler.LICH, -1);
 		}
 	}
