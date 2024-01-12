@@ -29,6 +29,7 @@ public final class MSItems {
 	public static final Item ring_web = placeholder();
 	public static final Item ring_transformation = placeholder();
 //	public static final Item ring_phoenix = placeholder();
+	public static final Item ring_starfall = placeholder();
 	public static final Item amulet_transformation_protection = placeholder();
 	public static final Item charm_druid_stone = placeholder();
 	public static final Item charm_phoenix_feather = placeholder();
@@ -45,6 +46,7 @@ public final class MSItems {
 		ItemRegistry.registerItemArtefact(registry, "ring_web", MorphSpellPack.MODID, new ItemArtefact(EnumRarity.UNCOMMON, ItemArtefact.Type.RING));
 		ItemRegistry.registerItemArtefact(registry, "ring_bat", MorphSpellPack.MODID, new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.RING));
 		ItemRegistry.registerItemArtefact(registry, "ring_transformation", MorphSpellPack.MODID, new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.RING));
+		ItemRegistry.registerItemArtefact(registry, "ring_starfall", MorphSpellPack.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.RING));
 	//	ItemRegistry.registerItemArtefact(registry, "ring_phoenix", MorphSpellPack.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.RING));
 
 		ItemRegistry.registerItemArtefact(registry, "amulet_transformation_protection", MorphSpellPack.MODID, new ItemArtefact(EnumRarity.RARE, ItemArtefact.Type.AMULET));

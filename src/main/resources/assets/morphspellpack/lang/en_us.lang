@@ -36,6 +36,8 @@ item.morphspellpack:ring_transformation.desc=Transformation spells last twice as
 item.morphspellpack:ring_transformation.name=Ring of Transformation
 item.morphspellpack:ring_web.desc=Grants you the ability to shoot cobwebs when transformed into a spider
 item.morphspellpack:ring_web.name=Ring of Webbing
+item.morphspellpack:ring_starfall.desc=Significantly empowers the Starfall Spell
+item.morphspellpack:ring_starfall.name=Ring of Celestial Cascade
 item.morphspellpack:clay_of_creation.desc=Magical material which can form creatures
 item.morphspellpack:clay_of_creation.name=Clay of Creation
 

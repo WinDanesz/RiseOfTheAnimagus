@@ -2,11 +2,18 @@ package com.windanesz.morphspellpack.spell;
 
 import com.windanesz.morphspellpack.MorphSpellPack;
 import com.windanesz.morphspellpack.entity.construct.EntityStarfall;
+import com.windanesz.morphspellpack.registry.MSItems;
+import com.windanesz.morphspellpack.registry.MSSpells;
+import electroblob.wizardry.item.ItemArtefact;
+import electroblob.wizardry.registry.WizardryItems;
+import electroblob.wizardry.spell.Spell;
 import electroblob.wizardry.spell.SpellConstructRanged;
 import electroblob.wizardry.util.SpellModifiers;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+import org.w3c.dom.Entity;
 
 import javax.annotation.Nullable;
 
@@ -14,7 +21,7 @@ public class Starfall extends SpellConstructRanged<EntityStarfall> {
 
 	public Starfall(){
 		super(MorphSpellPack.MODID,"starfall", EntityStarfall::new, false);
-		this.floor(true);
+		this.floor(false);
 		addProperties(EFFECT_RADIUS);
 	}
 
@@ -34,6 +41,9 @@ public class Starfall extends SpellConstructRanged<EntityStarfall> {
 		// Moves the entity up 5 blocks so that it is above mobs' heads.
 		y += 5;
 
+		if (caster instanceof EntityPlayer && ItemArtefact.isArtefactActive((EntityPlayer) caster, MSItems.ring_starfall)) {
+			modifiers.set(WizardryItems.duration_upgrade, modifiers.get(WizardryItems.duration_upgrade) * 2f, true);
+		}
 		return super.spawnConstruct(world, x, y, z, side, caster, modifiers);
 	}
 
@@ -44,6 +54,11 @@ public class Starfall extends SpellConstructRanged<EntityStarfall> {
 		}else{
 			construct.rotationYaw = side.getHorizontalAngle();
 		}
+		float bonus = 1.0f;
+		if (caster instanceof EntityPlayer && ItemArtefact.isArtefactActive((EntityPlayer) caster, MSItems.ring_starfall)) {
+			bonus = 15f;
+		}
+		construct.setRadius(MSSpells.starfall.getProperty(Spell.EFFECT_RADIUS).floatValue() * modifiers.get(WizardryItems.blast_upgrade) + bonus);
 	}
 
 }
