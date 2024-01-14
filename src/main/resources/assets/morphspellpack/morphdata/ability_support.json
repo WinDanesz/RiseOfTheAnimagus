@@ -5,6 +5,9 @@
         "fireImmunity",
         "hover"
     ],
+    "net.minecraft.entity.monster.EntityEnderman": [
+        "spellCast|ebwizardry:blink,0,60"
+    ],
     "com.windanesz.morphspellpack.entity.living.EntityBatMinion": [
         "flightFlap",
         "timedPotion|minecraft:night_vision,300,300,morphspellpack:ring_bat"
