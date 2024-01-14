@@ -5,6 +5,7 @@ import com.windanesz.morphspellpack.spell.SpellTransformation;
 import electroblob.wizardry.data.IStoredVariable;
 import electroblob.wizardry.data.Persistence;
 import electroblob.wizardry.data.WizardData;
+import me.ichun.mods.morph.common.handler.PlayerMorphHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -13,6 +14,7 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Mod.EventBusSubscriber
 public class LichHandler {
@@ -64,7 +66,8 @@ public class LichHandler {
 
 	@SubscribeEvent
 	public static void onEntityJoinWorld(EntityJoinWorldEvent event) {
-		if (event.getEntity() instanceof EntityPlayer && isLich(event.getEntity()) && !((EntityPlayer) event.getEntity()).isPotionActive(MSPotions.curse_of_transformation)) {
+		if (event.getEntity() instanceof EntityPlayer && isLich(event.getEntity()) && !((EntityPlayer) event.getEntity()).isPotionActive(MSPotions.curse_of_transformation)
+				&& !PlayerMorphHandler.getInstance().hasMorph(event.getEntity().getName(), Side.SERVER)) {
 			SpellTransformation.morphPlayer((EntityPlayer) event.getEntity(), LichHandler.LICH, -1);
 		}
 	}
