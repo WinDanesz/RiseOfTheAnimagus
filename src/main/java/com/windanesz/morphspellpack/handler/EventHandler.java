@@ -6,6 +6,7 @@ import com.windanesz.morphspellpack.items.ItemSoulPhylactery;
 import com.windanesz.morphspellpack.registry.MSItems;
 import com.windanesz.morphspellpack.spell.SpellTransformation;
 import com.windanesz.wizardryutils.integration.baubles.BaublesIntegration;
+import electroblob.wizardry.data.WizardData;
 import electroblob.wizardry.event.SpellCastEvent;
 import electroblob.wizardry.item.ItemArtefact;
 import electroblob.wizardry.item.ItemScroll;
@@ -21,6 +22,7 @@ import electroblob.wizardry.util.SpellModifiers;
 import me.ichun.mods.morph.api.event.MorphAcquiredEvent;
 import me.ichun.mods.morph.api.event.MorphEvent;
 import me.ichun.mods.morph.common.Morph;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -178,8 +180,22 @@ public final class EventHandler {
 	@SubscribeEvent
 	public static void onEntityJoinWorld(EntityJoinWorldEvent event) {
 		if (event.getEntity() instanceof EntityPlayer) {
-			SpellTransformation.resumeMorph(event.getEntity());
+			resumeMorph(event.getEntity());
 		}
 	}
 
+	public static void resumeMorph(Entity player) {
+		if (player instanceof EntityPlayer && !player.world.isRemote) {
+
+			WizardData data = WizardData.get((EntityPlayer) player);
+			if (data != null) {
+				String lastMorph = data.getVariable(SpellTransformation.LAST_MORPH);
+				Integer duration = data.getVariable(SpellTransformation.MORPH_DURATION);
+
+				if (lastMorph != null && duration != null && duration > 0 && !lastMorph.equals(LichHandler.LICH)) {
+					SpellTransformation.morphPlayer((EntityPlayer) player, lastMorph, duration);
+				}
+			}
+		}
+	}
 }
