@@ -1,6 +1,7 @@
 package com.windanesz.morphspellpack.spell;
 
 import com.windanesz.morphspellpack.MorphSpellPack;
+import com.windanesz.morphspellpack.entity.living.EntityLich;
 import com.windanesz.morphspellpack.handler.LichHandler;
 import com.windanesz.morphspellpack.registry.MSItems;
 import com.windanesz.morphspellpack.registry.MSPotions;
@@ -21,6 +22,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
 
 public class SpellTransformation extends Spell {
 
@@ -111,21 +113,6 @@ public class SpellTransformation extends Spell {
 		return false;
 	}
 
-	public static void resumeMorph(Entity player) {
-		if (player instanceof EntityPlayer && !player.world.isRemote) {
-
-			WizardData data = WizardData.get((EntityPlayer) player);
-			if (data != null) {
-				String lastMorph = data.getVariable(LAST_MORPH);
-				Integer duration = data.getVariable(MORPH_DURATION);
-
-				if (lastMorph != null && duration != null && duration > 0 && !lastMorph.equals(LichHandler.LICH)) {
-					morphPlayer((EntityPlayer) player, lastMorph, duration);
-				}
-			}
-		}
-	}
-
 	@Override
 	public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers) {
 		return morph(world, caster, hand, ticksInUse, modifiers);
@@ -134,14 +121,17 @@ public class SpellTransformation extends Spell {
 	public boolean morph(World world, EntityLivingBase caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers) {
 		if (world.isRemote) { this.playSound(world, caster, ticksInUse, -1, modifiers); }
 
-		if (!world.isRemote) {
+		if (!world.isRemote && caster instanceof EntityPlayer) {
 			// check if the player is morphing or morphed already. Revert to human if already morphed
 			if (Morph.eventHandlerServer.morphsActive.containsKey(caster.getName())
-					&& !Morph.eventHandlerServer.morphsActive.get(caster.getName()).isMorphing() && !LichHandler.isLich(caster)) {
+					&& !Morph.eventHandlerServer.morphsActive.get(caster.getName()).isMorphing() &&
+					!(PlayerMorphHandler.getInstance().getMorphEntity(world, caster.getName(), Side.SERVER) instanceof EntityLich)) {
 				demorphPlayer(caster);
 				return false;
 			}
 			int duration = getProperty(DURATION).intValue();
+
+			WizardData.get((EntityPlayer) caster).stopCastingContinuousSpell();;
 			boolean flag = morphPlayer(caster, morph, duration);
 			if (flag) {
 				morphExtra(world, caster, morph, duration);
