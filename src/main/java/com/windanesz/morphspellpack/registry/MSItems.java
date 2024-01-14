@@ -38,6 +38,7 @@ public final class MSItems {
 	public static final Item charm_soul_phylactery = placeholder();
 	public static final Item charm_lich_tome = placeholder();
 	public static final Item charm_clay_of_creation = placeholder();
+	public static final Item lich_spell_book = placeholder();
 
 	@SubscribeEvent
 	public static void register(RegistryEvent.Register<Item> event) {
@@ -58,7 +59,7 @@ public final class MSItems {
 		ItemRegistry.registerItemArtefact(registry, "charm_lich_tome", MorphSpellPack.MODID, new ItemLichTome(EnumRarity.RARE, ItemArtefact.Type.CHARM));
 		ItemRegistry.registerItemArtefact(registry, "charm_bottled_shadow", MorphSpellPack.MODID, new ItemShadowBottle(EnumRarity.EPIC, ItemArtefact.Type.CHARM));
 
-		ItemRegistry.registerItemArtefact(registry, "clay_of_creation", MorphSpellPack.MODID, new ItemClayOfCreation());
+	//	ItemRegistry.registerItemArtefact(registry, "clay_of_creation", MorphSpellPack.MODID, new ItemClayOfCreation());
 	}
 
 	@Nonnull

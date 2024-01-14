@@ -3,6 +3,8 @@ package com.windanesz.morphspellpack.handler;
 import com.windanesz.morphspellpack.ability.active.AbilityDisguise;
 import com.windanesz.morphspellpack.ability.active.AbilityItemSpawn;
 import com.windanesz.morphspellpack.ability.active.AbilityLichPhylactery;
+import com.windanesz.morphspellpack.ability.active.AbilityPassivePotion;
+import com.windanesz.morphspellpack.ability.active.AbilityPigMushroomSpawn;
 import com.windanesz.morphspellpack.ability.active.AbilityPotionResistance;
 import com.windanesz.morphspellpack.ability.active.AbilitySelfDetonate;
 import com.windanesz.morphspellpack.ability.active.AbilitySpell;
@@ -11,7 +13,6 @@ import com.windanesz.morphspellpack.ability.active.AbilityTimedPotion;
 import com.windanesz.morphspellpack.ability.active.AbilityWaterBreath;
 import com.windanesz.morphspellpack.ability.active.AbilityWebWalk;
 import com.windanesz.morphspellpack.ability.trait.AbilityHover;
-import com.windanesz.morphspellpack.ability.trait.AbilityHoverTogglable;
 import me.ichun.mods.morph.common.handler.AbilityHandler;
 
 public class MSAbilityHandler {
@@ -28,5 +29,7 @@ public class MSAbilityHandler {
 		AbilityHandler.getInstance().registerAbility(AbilityPotionResistance.name, AbilityPotionResistance.class);
 		AbilityHandler.getInstance().registerAbility(AbilityWaterBreath.name, AbilityWaterBreath.class);
 		AbilityHandler.getInstance().registerAbility(AbilityItemSpawn.name, AbilityItemSpawn.class);
+		AbilityHandler.getInstance().registerAbility(AbilityPigMushroomSpawn.name, AbilityPigMushroomSpawn.class);
+		AbilityHandler.getInstance().registerAbility(AbilityPassivePotion.name, AbilityPassivePotion.class);
 	}
 }

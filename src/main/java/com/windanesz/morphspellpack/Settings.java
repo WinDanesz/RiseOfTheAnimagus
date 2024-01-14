@@ -56,7 +56,11 @@ public class Settings {
 
 		@Config.Name("Lich Tweak - Take Damage without Soul Phylactery")
 		@Config.Comment("If true: the lich takes damage if they don't have the soul phylactery")
-		public boolean soul_phylactery_requirement = true;
+		public boolean soul_phylactery_requirement_damage = false;
+
+		@Config.Name("Lich Tweak - Apply Curse of Enfeeblement without Soul Phylactery")
+		@Config.Comment("If true: the lich receives the curse if they don't have the soul phylactery")
+		public boolean soul_phylactery_requirement_curse = true;
 
 		@Config.Name("Soul Phylactery - mob list")
 		@Config.Comment("Also see the other related setting")
