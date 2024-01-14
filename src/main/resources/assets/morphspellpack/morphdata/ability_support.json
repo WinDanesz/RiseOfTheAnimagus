@@ -11,7 +11,26 @@
     ],
     "net.minecraft.entity.passive.EntityChicken": [
         "flightFlap",
-        "itemSpawn|minecraft:feather,1,600,true"
+        "itemSpawn|1,600,true,minecraft:feather"
+    ],
+    "net.minecraft.entity.passive.EntityHorse": [
+        "step|1F",
+        "passivePotion|minecraft:speed,1,40,minecraft:jump_boost,1,40"
+    ],
+    "net.minecraft.entity.passive.EntityDonkey": [
+        "step|1F",
+        "passivePotion|minecraft:speed,0,40,minecraft:jump_boost,0,40"
+    ],
+    "net.minecraft.entity.passive.EntityRabbit": [
+        "step|1F",
+        "passivePotion|minecraft:jump_boost,2,40"
+    ],
+    "net.minecraft.entity.passive.EntityMule": [
+        "step|1F",
+        "passivePotion|minecraft:speed,0,40,minecraft:jump_boost,0,40"
+    ],
+    "net.minecraft.entity.passive.EntityPig": [
+        "itemSpawnPigMushroom|1,600,true,minecraft:red_mushroom,minecraft:brown_mushroom"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityDisguise": [
         "disguise"
