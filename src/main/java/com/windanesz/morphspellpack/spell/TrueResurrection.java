@@ -1,6 +1,7 @@
 package com.windanesz.morphspellpack.spell;
 
 import com.windanesz.morphspellpack.MorphSpellPack;
+import com.windanesz.morphspellpack.Utils;
 import com.windanesz.morphspellpack.items.ItemSoulPhylactery;
 import com.windanesz.morphspellpack.registry.MSItems;
 import com.windanesz.wizardryutils.integration.baubles.BaublesIntegration;
@@ -44,6 +45,7 @@ public class TrueResurrection extends Spell {
 			}
 
 		}
+		Utils.sendMessage(caster, "spell.morphspellpack:true_resurrection.missing_phylactery", true);
 		return false;
 	}
 

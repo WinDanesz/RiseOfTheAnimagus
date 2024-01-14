@@ -96,6 +96,7 @@ spell.morphspellpack:starfall.desc=Shoots a barrange of radiant light
 spell.morphspellpack:starfall=Starfall
 spell.morphspellpack:true_resurrection.desc=Consumes the content of a full Soul Phylactery to resurrect an entity.
 spell.morphspellpack:true_resurrection=True Resurrection
+spell.morphspellpack:true_resurrection.missing_phylactery=You need to have a full Soul Phylactery equipped
 spell.morphspellpack:shape_binding.desc=Increases the duration of the current transformation by 12 seconds.
 spell.morphspellpack:shape_binding=Shape Binding
 spell.morphspellpack:soul_conjuration.desc=Create temporary minions from a Soul Phylactery.
