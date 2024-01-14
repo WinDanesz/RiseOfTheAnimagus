@@ -6,11 +6,18 @@
         "hover"
     ],
     "net.minecraft.entity.monster.EntityEnderman": [
-        "spellCast|ebwizardry:blink,0,60"
+        "spellCast|ebwizardry:blink,0,60",
+        "waterAllergy",
+        "hostile"
     ],
     "com.windanesz.morphspellpack.entity.living.EntityBatMinion": [
         "flightFlap",
         "timedPotion|minecraft:night_vision,300,300,morphspellpack:ring_bat"
+    ],
+    "net.minecraft.entity.passive.EntityOcelot": [
+        "fallNegate",
+        "fear|6,1.05D,net.minecraft.entity.monster.EntityCreeper",
+        "spellCast|ebwizardry:leap,0,60"
     ],
     "net.minecraft.entity.passive.EntityChicken": [
         "flightFlap",
@@ -25,6 +32,10 @@
         "passivePotion|minecraft:speed,0,40,minecraft:jump_boost,0,40"
     ],
     "net.minecraft.entity.passive.EntityRabbit": [
+        "step|1F",
+        "passivePotion|minecraft:jump_boost,2,40"
+    ],
+    "com.windanesz.morphspellpack.entity.living.EntityTemporaryRabbit": [
         "step|1F",
         "passivePotion|minecraft:jump_boost,2,40"
     ],
