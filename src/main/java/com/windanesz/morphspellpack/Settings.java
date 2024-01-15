@@ -76,7 +76,8 @@ public class Settings {
 
 		@Config.Name("Curse of Transformation - mob list")
 		@Config.Comment("Players can be transformed to these entities")
-		public String[] curse_of_transformation_mob_list = {"morphspellpack:temporary_rabbit", "minecraft:chicken", "morphspellpack:bat_minion"};
+		public String[] curse_of_transformation_mob_list = {"morphspellpack:temporary_rabbit", "minecraft:chicken", "morphspellpack:bat_minion", "minecraft:pig", "minecraft:horse",
+		"minecraft:mule", "minecraft:donkey", "minecraft:cow", "minecraft:sheep", "minecraft:ocelot"};
 
 		@Config.Name("Druid Stone effect duration")
 		@Config.Comment("The Druid Stone artefact will transform the player for this duration in ticks")
