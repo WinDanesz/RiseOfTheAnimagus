@@ -1,4 +1,4 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
 import net.minecraft.world.biome.BiomeForest;
 

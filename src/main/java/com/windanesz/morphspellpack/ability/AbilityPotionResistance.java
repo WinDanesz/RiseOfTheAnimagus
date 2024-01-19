@@ -1,4 +1,4 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
 import com.windanesz.morphspellpack.MorphSpellPack;
 import me.ichun.mods.morph.api.ability.Ability;

@@ -1,6 +1,5 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
-import com.windanesz.morphspellpack.ability.IActiveAbility;
 import com.windanesz.morphspellpack.spell.SpellTransformation;
 import electroblob.wizardry.data.WizardData;
 import electroblob.wizardry.util.EntityUtils;

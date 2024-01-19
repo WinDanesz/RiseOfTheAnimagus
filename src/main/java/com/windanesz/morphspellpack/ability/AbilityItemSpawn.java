@@ -1,6 +1,5 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
-import com.windanesz.morphspellpack.ability.IActiveAbility;
 import com.windanesz.wizardryutils.tools.WizardryUtilsTools;
 import me.ichun.mods.morph.api.ability.Ability;
 import net.minecraft.entity.player.EntityPlayerMP;

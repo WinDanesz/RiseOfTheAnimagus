@@ -1,19 +1,15 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
-import com.windanesz.morphspellpack.ability.IActiveAbility;
-import electroblob.wizardry.item.ItemArtefact;
 import me.ichun.mods.morph.api.ability.Ability;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
-public class AbilityTimedPotionFromArtefact extends Ability implements IActiveAbility {
+public class AbilityTimedPotion extends Ability implements IActiveAbility {
 
-	public static final String name = "timedPotionWithArtefact";
+	public static final String name = "timedPotion";
 	private String potionName;
 	public Boolean toggled; //reset motionY when the triggered?
 
@@ -21,18 +17,16 @@ public class AbilityTimedPotionFromArtefact extends Ability implements IActiveAb
 	public int maxCooldown = 0;
 	public int effectDuration = 0;
 	Potion potion;
-	private Item artefact;
 
 	@SuppressWarnings("unused")
-	public AbilityTimedPotionFromArtefact() {
+	public AbilityTimedPotion() {
 	}
 
-	public AbilityTimedPotionFromArtefact(String potion, int maxCooldown, int effectDuration, Item artefact) {
+	public AbilityTimedPotion(String potion, int maxCooldown, int effectDuration) {
 		this.potionName = potion;
 		this.maxCooldown = maxCooldown;
 		this.effectDuration = effectDuration;
 		this.potion = ForgeRegistries.POTIONS.getValue(new ResourceLocation(potion));
-		this.artefact = artefact;
 	}
 
 	@Override
@@ -40,13 +34,12 @@ public class AbilityTimedPotionFromArtefact extends Ability implements IActiveAb
 		potionName = args[0];
 		maxCooldown = Integer.parseInt(args[1]);
 		effectDuration = Integer.parseInt(args[2]);
-		artefact = ForgeRegistries.ITEMS.getValue(new ResourceLocation(args[3]));
 		return this;
 	}
 
 	@Override
 	public Ability clone() {
-		return new AbilityTimedPotionFromArtefact(potionName, maxCooldown, effectDuration, artefact);
+		return new AbilityTimedPotion(potionName, maxCooldown, effectDuration);
 	}
 
 	@Override
@@ -76,11 +69,5 @@ public class AbilityTimedPotionFromArtefact extends Ability implements IActiveAb
 	@Override
 	public void toggleAbility() {
 		toggled = true;
-	}
-
-	@Override
-	public boolean conditionPredicate() {
-		return (this.getParent() instanceof EntityPlayer && this.artefact != null
-				&& ItemArtefact.isArtefactActive((EntityPlayer) getParent(), this.artefact));
 	}
 }

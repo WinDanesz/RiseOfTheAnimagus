@@ -1,4 +1,4 @@
-package com.windanesz.morphspellpack.ability.trait;
+package com.windanesz.morphspellpack.ability;
 
 import electroblob.wizardry.util.BlockUtils;
 import me.ichun.mods.morph.api.ability.Ability;

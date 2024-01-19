@@ -1,4 +1,4 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
 import electroblob.wizardry.item.ItemArtefact;
 import electroblob.wizardry.spell.Spell;

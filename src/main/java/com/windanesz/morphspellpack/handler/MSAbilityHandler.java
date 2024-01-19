@@ -1,18 +1,19 @@
 package com.windanesz.morphspellpack.handler;
 
-import com.windanesz.morphspellpack.ability.active.AbilityDisguise;
-import com.windanesz.morphspellpack.ability.active.AbilityItemSpawn;
-import com.windanesz.morphspellpack.ability.active.AbilityLichPhylactery;
-import com.windanesz.morphspellpack.ability.active.AbilityPassivePotion;
-import com.windanesz.morphspellpack.ability.active.AbilityPigMushroomSpawn;
-import com.windanesz.morphspellpack.ability.active.AbilityPotionResistance;
-import com.windanesz.morphspellpack.ability.active.AbilitySelfDetonate;
-import com.windanesz.morphspellpack.ability.active.AbilitySpell;
-import com.windanesz.morphspellpack.ability.active.AbilitySpellFromArtefact;
-import com.windanesz.morphspellpack.ability.active.AbilityTimedPotion;
-import com.windanesz.morphspellpack.ability.active.AbilityWaterBreath;
-import com.windanesz.morphspellpack.ability.active.AbilityWebWalk;
-import com.windanesz.morphspellpack.ability.trait.AbilityHover;
+import com.windanesz.morphspellpack.ability.AbilityDisguise;
+import com.windanesz.morphspellpack.ability.AbilityItemSpawn;
+import com.windanesz.morphspellpack.ability.AbilityLichPhylactery;
+import com.windanesz.morphspellpack.ability.AbilityPassivePotion;
+import com.windanesz.morphspellpack.ability.AbilityPigMushroomSpawn;
+import com.windanesz.morphspellpack.ability.AbilityPotionResistance;
+import com.windanesz.morphspellpack.ability.AbilitySelfDetonate;
+//import com.windanesz.morphspellpack.ability.AbilitySniffPlayer;
+import com.windanesz.morphspellpack.ability.AbilitySpell;
+import com.windanesz.morphspellpack.ability.AbilitySpellFromArtefact;
+import com.windanesz.morphspellpack.ability.AbilityTimedPotion;
+import com.windanesz.morphspellpack.ability.AbilityWaterBreath;
+import com.windanesz.morphspellpack.ability.AbilityWebWalk;
+import com.windanesz.morphspellpack.ability.AbilityHover;
 import me.ichun.mods.morph.common.handler.AbilityHandler;
 
 public class MSAbilityHandler {
@@ -31,5 +32,6 @@ public class MSAbilityHandler {
 		AbilityHandler.getInstance().registerAbility(AbilityItemSpawn.name, AbilityItemSpawn.class);
 		AbilityHandler.getInstance().registerAbility(AbilityPigMushroomSpawn.name, AbilityPigMushroomSpawn.class);
 		AbilityHandler.getInstance().registerAbility(AbilityPassivePotion.name, AbilityPassivePotion.class);
+//		AbilityHandler.getInstance().registerAbility(AbilitySniffPlayer.name, AbilitySniffPlayer.class);
 	}
 }

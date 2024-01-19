@@ -1,4 +1,4 @@
-package com.windanesz.morphspellpack.ability.active;
+package com.windanesz.morphspellpack.ability;
 
 import me.ichun.mods.morph.api.ability.Ability;
 import net.minecraft.entity.Entity;
