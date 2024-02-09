@@ -8,6 +8,7 @@ import com.windanesz.morphspellpack.ability.AbilityPigMushroomSpawn;
 import com.windanesz.morphspellpack.ability.AbilityPotionResistance;
 import com.windanesz.morphspellpack.ability.AbilitySelfDetonate;
 //import com.windanesz.morphspellpack.ability.AbilitySniffPlayer;
+import com.windanesz.morphspellpack.ability.AbilitySniffPlayer;
 import com.windanesz.morphspellpack.ability.AbilitySpell;
 import com.windanesz.morphspellpack.ability.AbilitySpellFromArtefact;
 import com.windanesz.morphspellpack.ability.AbilityTimedPotion;
@@ -32,6 +33,6 @@ public class MSAbilityHandler {
 		AbilityHandler.getInstance().registerAbility(AbilityItemSpawn.name, AbilityItemSpawn.class);
 		AbilityHandler.getInstance().registerAbility(AbilityPigMushroomSpawn.name, AbilityPigMushroomSpawn.class);
 		AbilityHandler.getInstance().registerAbility(AbilityPassivePotion.name, AbilityPassivePotion.class);
-//		AbilityHandler.getInstance().registerAbility(AbilitySniffPlayer.name, AbilitySniffPlayer.class);
+		AbilityHandler.getInstance().registerAbility(AbilitySniffPlayer.name, AbilitySniffPlayer.class);
 	}
 }

@@ -105,4 +105,4 @@ spelltype.transformation=Transformation
 
 gui.morphspellpack:lich_tome.title=Ritual of the Lich
 gui.morphspellpack:lich_tome.desc=Liches are powerful undead beings, born when a wizard seals his own soul in a Soul Phylactery by burning up his body in fire. The transformation is permanent. A wizard must hold this tome, have an empty phylactery equipped, and create an altar of 8 soul sands and 4 skulls, setting a fire in the middle with the skulls facing it. Liches cannot eat and must drink from Soul Phylacteries to sustain themselves. Liches must always wear their phylactery, or they very quickly disintegrate. If the phylactery breaks, they can create a new one with the same ritual to seal their soul again. Wearing phylacteries of other entities only provide a temporary remedy for them.
-
+ability.morphspellpack:locate_player.msg=You can smell %1$s is at x%2$s y%3$s z%3$s
