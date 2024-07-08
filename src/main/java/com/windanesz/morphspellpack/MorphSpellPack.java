@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = MorphSpellPack.MODID, name = MorphSpellPack.NAME, version = "@VERSION@", acceptedMinecraftVersions = "[@MCVERSION@]",
-		dependencies = "required-after:ebwizardry@[@WIZARDRY_VERSION@,4.4);required-after:morph@[7.2.0,8.0.0);required-after:wizardryutils@[1.1.1,2.0.0);")
+		dependencies = "required-after:ebwizardry@[@WIZARDRY_VERSION@,4.4);required-after:morph@[7.2.0,8.0.0);required-after:wizardryutils@[1.2.3,2.0.0);")
 public class MorphSpellPack {
 
 	public static final String MODID = "morphspellpack";
