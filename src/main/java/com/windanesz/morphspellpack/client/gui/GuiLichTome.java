@@ -83,16 +83,16 @@ public class GuiLichTome extends GuiScreen {
 		String descString = "gui." + ritualBook.getItem().getRegistryName().toString() + ".desc";
 		String fullDesc = Wizardry.proxy.translate(descString);
 		boolean discovered = true;
-		int splitIndex = discovered ? 380 : 200;
-		if (doublePage) {
-			int i = 380;
+		int splitIndex = discovered ? Math.min(380, fullDesc.length()) : Math.min(200, fullDesc.length());
+		if (doublePage && fullDesc.length() > 0) {
+			int i = Math.min(380, fullDesc.length() - 1);
 
-			for (int j = 0; j < 30; j++) {
+			for (int j = 0; j < 30 && i > 0; j++) {
 				if (fullDesc.length() > i && Character.isWhitespace(fullDesc.charAt(i))) {
 					break;
 				}
 				if (j < 15) {
-					i++;
+					i = Math.min(i + 1, fullDesc.length() - 1);
 				} else {
 					i--;
 				}
@@ -113,10 +113,10 @@ public class GuiLichTome extends GuiScreen {
 		this.fontRenderer.drawString(name, left + 20, top + 20, 0);
 		this.fontRenderer.setUnicodeFlag(false);
 
-		if (doublePage && currentPage == 0) {
+		if (doublePage && currentPage == 0 && fullDesc.length() > 0) {
 			doublePage = true;
-			desc = fullDesc.substring(0, splitIndex);
-			rightSideDesc = fullDesc.substring(splitIndex);
+			desc = fullDesc.substring(0, Math.min(splitIndex, fullDesc.length()));
+			rightSideDesc = splitIndex < fullDesc.length() ? fullDesc.substring(splitIndex) : "";
 		} else {
 			RenderItem itemRenderer = Minecraft.getMinecraft().getRenderItem();
 			ItemStack stackTooltip = ItemStack.EMPTY;
