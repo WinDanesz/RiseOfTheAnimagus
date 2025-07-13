@@ -150,8 +150,8 @@ gui.morphspellpack:charm_lich_tome_3.desc=The potent effects of the Lich's Soul 
 ability.morphspellpack:locate_player.msg=You can smell %1$s is at x%2$s y%3$s z%3$s
 item.morphspellpack:ring_skinchanger.name=Ring of Veilus the Versatile
 item.morphspellpack:ring_skinchanger.desc=The Skinchanger spell always remembers the last creature's form and can be re-cast without targeting. Sneak-cast the spell on a creature to remember its form while the ring is equipped
-item.morphspellpack:charm_undead_sunburn.name=Necrocloak
-item.morphspellpack:charm_undead_sunburn.desc=Protects undead players from sunburn
+item.morphspellpack:body_undead_sunburn.name=Necrocloak
+item.morphspellpack:body_undead_sunburn.desc=Protects undead players from sunburn
 
 tile.morphspellpack:lich_phial_holder_empty.name=Empty Lich Soul Receptacle
 tile.morphspellpack:lich_phial_holder.name=Lich Soul Receptacle

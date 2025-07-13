@@ -5,7 +5,6 @@ import com.windanesz.morphspellpack.registry.MSItems;
 import com.windanesz.morphspellpack.registry.MSPotions;
 import electroblob.wizardry.constants.Element;
 import electroblob.wizardry.item.ItemArtefact;
-import electroblob.wizardry.registry.WizardryPotions;
 import me.ichun.mods.morph.api.ability.Ability;
 import me.ichun.mods.morph.api.ability.type.AbilityFireImmunity;
 import me.ichun.mods.morph.common.Morph;
@@ -16,11 +15,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemAir;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -56,7 +53,7 @@ public class AbilityLichSunburn extends Ability {
 				hasHealingCrystals = LichHandler.getCrystalPyramid(this.getParent()).get(4).filter(el -> el == Element.HEALING).isPresent();
 			}
 			if (f > 0.5F && this.getParent().getRNG().nextFloat() * 30.0F < (f - 0.4F) * 2.0F && this.getParent().getEntityWorld().canBlockSeeSky(new BlockPos(MathHelper.floor(this.getParent().posX), MathHelper.floor(this.getParent().posY), MathHelper.floor(this.getParent().posZ)))) {
-				boolean shouldBurn = !ItemArtefact.isArtefactActive((EntityPlayer) this.getParent(), MSItems.charm_undead_sunburn) && !hasHealingCrystals && !this.getParent().isPotionActive(MSPotions.umbral_veil);
+				boolean shouldBurn = !ItemArtefact.isArtefactActive((EntityPlayer) this.getParent(), MSItems.body_undead_sunburn) && !hasHealingCrystals && !this.getParent().isPotionActive(MSPotions.umbral_veil);
 				ItemStack itemstack = this.getParent().getItemStackFromSlot(EntityEquipmentSlot.HEAD);
 
 				if (shouldBurn && !(itemstack.getItem() instanceof ItemAir)) {
