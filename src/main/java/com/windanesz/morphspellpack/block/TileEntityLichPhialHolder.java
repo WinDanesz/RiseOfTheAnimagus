@@ -234,7 +234,7 @@ public class TileEntityLichPhialHolder extends TileEntity implements IInventory,
 						getOwner().addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 1000, 0));
 					}
 				}
-				if (!pyramid.get(3).isPresent() || pyramid.get(3).get() != Element.MAGIC) {
+				if (!pyramid.get(2).isPresent() || pyramid.get(2).get() != Element.MAGIC) {
 					IAttributeInstance maxHealthAttribute = getOwner().getEntityAttribute(Attributes.CONDENSING);
 					AttributeModifier modifier = new AttributeModifier(UUID.fromString("4018222c-cf85-4627-bfd9-efbd94a7d928"),
 							"Phylactery mana regen", Settings.generalSettings.lich_soul_receptacle_layer_3_magic_crystal_block_mana_regen_amount, EntityUtils.Operations.ADD);
