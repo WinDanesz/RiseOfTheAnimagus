@@ -1,13 +1,13 @@
-<h2>Version v1.2.1 - 6/23/2024</h2>
+<h2>Version v1.2.4 - 11/26/2025</h2>
 <p>&nbsp;</p>
 <h3>What's Changed</h3>
 <p><span style="font-size: 1.2rem;">&nbsp;</span></p>
-<h4><strong>Features</strong></h4>
-<p>- Added a crafting recipe for soul receptacle</p>
-
 <h4><strong>Bug Fixes</strong></h4>
-<p>- Fixed typo in en_us.lang</p>
-<p>- Fixed the lunar cycle timer for lich spell gaining through the receptacle</p>
+<p>- GuiLichTome crash</p>
+<p>- Fixed crystal pyramid layer 2 for neutral (magic) crystals. Previously layer 2 only gave its mana regeneration effect when a layer 3 was also present.</p>
+
+<h4><strong>Features</strong></h4>
+<p>- Changed Necrocloak to body slot from charm slot</p>
 <p>&nbsp;</p>
 <p>As always, the easiest way to get help or feedback is through the Discord server! Find the link on the CurseForge page.</p>
 <p>&nbsp;</p>
